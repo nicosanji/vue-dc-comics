@@ -1,15 +1,16 @@
 <template>
-  <header>
-    <div>
-      <img src="../assets/dc-logo.png" alt="dc-logo" />
-    </div>
-    <div>
+  <header class="container">
+    <nav>
+      <img src="../assets/img/dc-logo.png" alt="dc-logo" />
       <ul>
-        <li v-for="(element, i) in headerNavList" :key="i">
-          <a :href="element.src">{{ element.txt }}</a>
+        <li v-for="(element, i) in navLinks" :key="i">
+          <a :href="element.src" @click.prevent="currentIndex = i">{{
+            element.txt
+          }}</a>
+          <div :class="i === currentIndex ? 'active' : ''"></div>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 </template>
 
@@ -18,7 +19,8 @@ export default {
   name: "Header",
   data() {
     return {
-      headerNavList: [
+      currentIndex: 0,
+      navLinks: [
         {
           txt: "CHARACTERS",
           src: "#",
@@ -65,6 +67,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-@import "../styles/header";
-</style>
+<style></style>

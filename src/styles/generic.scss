@@ -1,0 +1,226 @@
+@import "./variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: $max-width-container;
+    margin: auto;
+    font-family: $primary-font;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        padding: $padding-y-container 0;
+        position: relative;
+
+        li {
+            display: inline-block;
+
+            .active {
+                width: 100%;
+                height: 5px;
+                background-color: #0282f9;
+                transform: translateY(60px);
+                left: 0;
+                bottom: -60px;
+            }
+
+            a {
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: #1c1c1c;
+    color: white;
+
+    .main-hero {
+        width: 100%;
+        background-image: url("assets/img/jumbotron.jpg");
+        padding: 200px 0;
+    }
+
+    .container {
+        padding: $padding-y-container 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $padding-x * 2.05;
+
+        .label-cs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: $primary-color;
+            padding: $padding-y $padding-x;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            padding: $padding-y ($padding-x * 6);
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+
+    .container {
+        padding: $padding-y-container 0;
+        color: white;
+    }
+
+    .row {
+        display: flex;
+        padding-left: 5 * $padding-x;
+        height: 70px;
+        gap: 50px;
+
+        .col {
+            width: calc(100% / 5);
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            .img-col-container {
+                padding: $padding-y 0;
+            }
+
+            img {
+                height: 100%;
+                padding-right: $padding-x * 1.5;
+            }
+
+            #visa-img {
+                height: 80%;
+            }
+        }
+    }
+
+    .container-fluid {
+        background-image: url("assets/img/footer-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+
+            ul {
+                list-style: none;
+                padding-bottom: 30px;
+                a {
+                    display: inline-block;
+                    color: #959595;
+                    padding: $padding-y * 0.15 0;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .link-footer-container {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .img-footer-container {
+            position: relative;
+            text-align: right;
+            width: 50%;
+            img {
+                position: absolute;
+                top: -98px;
+                right: 0;
+                transform: scale(1.3);
+            }
+        }
+    }
+
+    .btn-container {
+        background-color: $footer-color;
+        width: 100%;
+
+        .social-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: ($padding-y-container / 2) 0;
+        }
+
+        .btn {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: $padding-y $padding-x;
+            background-color: transparent;
+            border: 2px solid $primary-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+
+        span {
+            color: $primary-color;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 0 $padding-x;
+        }
+
+        a {
+            padding: 0 $padding-x;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

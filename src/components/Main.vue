@@ -1,20 +1,39 @@
 <template>
   <main>
-    <div>
-      <h3>Content goes here</h3>
+    <div class="main-hero"></div>
+
+    <div class="container">
+      <div class="label-cs">CURRENT SERIES</div>
+
+      <Card
+        v-for="(card, i) in dcList"
+        :key="i"
+        :img="card.thumb"
+        :title="card.series.toUpperCase()"
+        :price="card.price"
+        :description="card.type"
+      ></Card>
+
+      <button>LOAD MORE</button>
     </div>
   </main>
 </template>
 
 <script>
+import jsonData from "@/assets/dc-comics.json";
+import Card from "./Card.vue";
+
 export default {
   name: "Main",
+  components: {
+    Card,
+  },
   data() {
-    return {};
+    return {
+      dcList: jsonData,
+    };
   },
 };
 </script>
 
-<style scoped lang="scss">
-@import "../styles/main";
-</style>
+<style></style>
