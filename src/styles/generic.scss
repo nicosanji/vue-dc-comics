@@ -191,7 +191,7 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: ($padding-y-container / 2) 0;
+            padding: calc($padding-y-container / 2) 0;
         }
 
         .btn {
