@@ -4,8 +4,8 @@
       <div class="img-container">
         <img :src="img" :alt="title" />
         <div class="overlay">
-          <span>{{ price }}</span> <br />
-          <span>{{ description }}</span>
+          <span>{{ description.toUpperCase() }}</span> <br />
+          <span>{{ price }}</span>
         </div>
       </div>
       <p class="card-title">{{ title }}</p>

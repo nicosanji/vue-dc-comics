@@ -28,7 +28,7 @@ nav {
             .active {
                 width: 100%;
                 height: 5px;
-                background-color: #0282f9;
+                background-color: $primary-color;
                 transform: translateY(60px);
                 left: 0;
                 bottom: -60px;
@@ -55,6 +55,8 @@ main {
     .main-hero {
         width: 100%;
         background-image: url("assets/img/jumbotron.jpg");
+        background-position-x: center;
+        background-size: cover;
         padding: 200px 0;
     }
 
@@ -99,9 +101,7 @@ footer {
 
     .row {
         display: flex;
-        padding-left: 5 * $padding-x;
         height: 70px;
-        gap: 50px;
 
         .col {
             width: calc(100% / 5);
@@ -109,17 +109,15 @@ footer {
             align-items: center;
             height: 100%;
 
-            &:hover {
-                transform: scale(1.2);
-            }
-
             .img-col-container {
                 padding: $padding-y 0;
             }
 
             img {
                 height: 100%;
-                padding-right: $padding-x * 1.5;
+                padding-right: $padding-x;
+                cursor: pointer;
+
             }
 
             #visa-img {
