@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="main-hero"></div>
+    <div class="hero"></div>
 
     <div class="container">
-      <div class="label-cs">CURRENT SERIES</div>
+      <div class="badge">CURRENT SERIES</div>
 
       <Card
         v-for="(card, i) in dcList"

@@ -52,12 +52,12 @@ main {
     background-color: #1c1c1c;
     color: white;
 
-    .main-hero {
+    .hero {
         width: 100%;
         background-image: url("assets/img/jumbotron.jpg");
         background-position-x: center;
         background-size: cover;
-        padding: 200px 0;
+        min-height: 400px;
     }
 
     .container {
@@ -68,13 +68,16 @@ main {
         justify-content: center;
         gap: $padding-x * 2.05;
 
-        .label-cs {
+        .badge {
             position: absolute;
             top: 0;
             left: 0;
             transform: translateY(-50%);
             background-color: $primary-color;
             padding: $padding-y $padding-x;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bolder;
         }
 
         button {
@@ -83,6 +86,9 @@ main {
             padding: $padding-y ($padding-x * 6);
             border: none;
             cursor: pointer;
+            font-family: $primary-font;
+            font-weight: bold;
+            font-size: 1rem;
 
             &:hover {
                 transform: scale(1.2);
@@ -101,6 +107,7 @@ footer {
 
     .row {
         display: flex;
+        justify-content: space-evenly;
         height: 70px;
 
         .col {
@@ -117,7 +124,6 @@ footer {
                 height: 100%;
                 padding-right: $padding-x;
                 cursor: pointer;
-
             }
 
             #visa-img {
