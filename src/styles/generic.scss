@@ -48,14 +48,6 @@ main {
     background-color: #1c1c1c;
     color: white;
 
-    .hero {
-        width: 100%;
-        background-image: url("assets/img/jumbotron.jpg");
-        background-position-x: center;
-        background-size: cover;
-        min-height: 400px;
-    }
-
     .container {
         padding: $padding-y-container 0;
         position: relative;
@@ -90,6 +82,14 @@ main {
             font-size: 20px;
             font-weight: bolder;
         }
+    }
+
+    .hero {
+        width: 100%;
+        background-image: url("assets/img/jumbotron.jpg");
+        background-position-x: center;
+        background-size: cover;
+        min-height: 400px;
     }
 }
 
@@ -136,7 +136,7 @@ footer {
         overflow: hidden;
 
         h2 {
-            margin-bottom: 15px;
+            margin-bottom: $padding-y;
         }
 
         .container {
@@ -145,6 +145,7 @@ footer {
             ul {
                 list-style: none;
                 padding-bottom: 30px;
+
                 a {
                     display: inline-block;
                     color: #959595;
@@ -152,7 +153,7 @@ footer {
                     text-decoration: none;
 
                     &:hover {
-                        color: white;
+                        color: $primary-color;
                     }
                 }
             }
@@ -191,13 +192,13 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: calc($padding-y-container / 2) 0;
+            padding: $padding-y-container 0;
         }
 
         .btn {
             color: white;
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: bold;
             padding: $padding-y $padding-x;
             background-color: transparent;
             border: 2px solid $primary-color;
